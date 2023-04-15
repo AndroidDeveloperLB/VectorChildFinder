@@ -1,0 +1,113 @@
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/scrollView"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <FrameLayout
+        android:layout_width="match_parent" android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_gravity="center" android:paddingHorizontal="8dp">
+
+            <ImageView
+                android:id="@+id/image" android:layout_width="180dp" android:layout_height="200dp"
+                android:layout_marginStart="8dp" android:layout_marginTop="32dp"
+                android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" app:srcCompat="@drawable/boy" />
+
+            <TextView
+                android:id="@+id/selectWhatToChangeTextView" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_marginStart="8dp"
+                android:text="Select what to change:" android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/image" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup" android:layout_width="0px"
+                android:layout_height="wrap_content" android:gravity="center"
+                android:orientation="vertical" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/selectWhatToChangeTextView">
+
+                <RadioButton
+                    android:id="@+id/mouthButton" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="Mouth (a single path)" />
+
+                <RadioButton
+                    android:id="@+id/eyesButton" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="Eyes (2 paths in a group)" />
+
+                <RadioButton
+                    android:id="@+id/skinButton" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Skin (multiple paths with same ID)" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/selectColorTextView" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_marginStart="8dp"
+                android:text="Select color" android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+            <Button
+                android:id="@+id/redColorButton" android:layout_width="0dp"
+                android:layout_height="wrap_content" android:layout_marginStart="8dp"
+                android:layout_marginEnd="4dp"
+                android:backgroundTint="@android:color/holo_red_light"
+                app:layout_constraintEnd_toStartOf="@+id/greenColorButton"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/selectColorTextView" />
+
+            <Button
+                android:id="@+id/greenColorButton" android:layout_width="0dp"
+                android:layout_height="wrap_content" android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:backgroundTint="@android:color/holo_green_dark"
+                app:layout_constraintEnd_toStartOf="@+id/blueColorButton"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/redColorButton"
+                app:layout_constraintTop_toBottomOf="@id/selectColorTextView" />
+
+            <Button
+                android:id="@+id/blueColorButton" android:layout_width="0dp"
+                android:layout_height="wrap_content" android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:backgroundTint="@android:color/holo_blue_dark"
+                app:layout_constraintEnd_toStartOf="@+id/purpleColorButton"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/greenColorButton"
+                app:layout_constraintTop_toBottomOf="@id/selectColorTextView" />
+
+            <Button
+                android:id="@+id/purpleColorButton" android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/holo_purple"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/blueColorButton"
+                app:layout_constraintTop_toBottomOf="@id/selectColorTextView" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/colorsButtonsGroup" android:layout_width="0px"
+                android:layout_height="0px" app:barrierDirection="bottom"
+                app:constraint_referenced_ids="blueColorButton,greenColorButton,redColorButton,purpleColorButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/clickExplanationTextView" android:layout_width="0px"
+                android:layout_height="wrap_content" android:gravity="center"
+                android:text="Another feature is that you can also choose parts to be clickable. Press the shirt, and we will show a toast message for it"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/colorsButtonsGroup" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+</androidx.core.widget.NestedScrollView>
+
