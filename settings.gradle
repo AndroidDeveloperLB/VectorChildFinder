@@ -13,6 +13,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "VectorChildFinderSample"
-include(":app")
-include(":library")
+rootProject.name = "VectorChildFinder"
+include ':app'
+include ':library'

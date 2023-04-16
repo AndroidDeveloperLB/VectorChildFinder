@@ -14,15 +14,14 @@ import androidx.annotation.ColorRes
 import androidx.core.content.res.ResourcesCompat
 import androidx.core.view.GestureDetectorCompat
 import com.lb.vector_child_finder_library.*
-import com.lb.vector_child_finder_library.VectorDrawableCompat.VFullPath
 import com.lb.vector_child_finder_sample.databinding.ActivityMainBinding
 import java.util.ArrayList
 
 class MainActivity : AppCompatActivity() {
     private lateinit var eyesGroup: VectorDrawableCompat.VGroup
-    private lateinit var mountFullPath: VFullPath
+    private lateinit var mountFullPath: VectorDrawableCompat.VFullPath
     private lateinit var binding: ActivityMainBinding
-    private lateinit var skinFullPaths: ArrayList<VFullPath>
+    private lateinit var skinFullPaths: ArrayList<VectorDrawableCompat.VFullPath>
 
     @SuppressLint("ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -63,7 +62,7 @@ class MainActivity : AppCompatActivity() {
             binding.eyesButton.isChecked -> {
                 eyesGroup.mChildren?.let { children ->
                     children.forEach {
-                        if (it is VFullPath)
+                        if (it is VectorDrawableCompat.VFullPath)
                             it.fillColor = color
                     }
                     binding.image.invalidate()
