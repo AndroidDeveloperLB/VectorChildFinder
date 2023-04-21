@@ -4,7 +4,7 @@ A repository to allows finding inner parts of VectorDrawable, and perform operat
 - https://github.com/devendroid/VectorChildFinder
 - https://github.com/m-melis/VectorChildFinder
 
-![sample gif animation](https://github.com/AndroidDeveloperLB/VectorChildFinder/blob/main/extras/sample_video.gif?raw=true)
+<img src="[https://your-image-url.type](https://github.com/AndroidDeveloperLB/VectorChildFinder/blob/main/extras/sample_video.gif)" width="300">
 
 ## Advantages over VectorDrawable&VectorDrawableCompat :
 
