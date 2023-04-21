@@ -6,12 +6,14 @@ A repository to allows finding inner parts of VectorDrawable, and perform operat
 
 <img src="https://raw.githubusercontent.com/AndroidDeveloperLB/VectorChildFinder/main/extras/sample_video.gif" width="250" >
 
+The need of this was because these are missing features, can't be added, and you can't use reflection to reach the various fields&methods of it, either (because of Android security).
+
 ## Advantages over VectorDrawable&VectorDrawableCompat :
 
 1. Can find paths/groups by name, apply what you wish on them.
 2. Can traverse entire hirerchy and apply what you wish on any node there.
-3. Can add click-listener for paths of your choice
-4. Due to always using the same inflation technique of the VectorDrawable, no matter the API, this should work the same for all Android versions
+3. Can add click-listener for paths of your choice.
+4. Due to always using the same inflation technique of the VectorDrawableCompat, no matter the API, this should work the same for all Android versions.
 
 ## Disadvantages:
 As it's based on an old library, which is based on old code of VectorDrawableCompat, which can't deal with certain things that were added later, such as gradient:
