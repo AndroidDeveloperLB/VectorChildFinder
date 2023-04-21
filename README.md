@@ -4,6 +4,8 @@ A repository to allows finding inner parts of VectorDrawable, and perform operat
 - https://github.com/devendroid/VectorChildFinder
 - https://github.com/m-melis/VectorChildFinder
 
+![sample gif animation](https://github.com/AndroidDeveloperLB/VectorChildFinder/blob/main/extras/sample_video.gif?raw=true)
+
 ## Advantages over VectorDrawable&VectorDrawableCompat :
 
 1. Can find paths/groups by name, apply what you wish on them.
