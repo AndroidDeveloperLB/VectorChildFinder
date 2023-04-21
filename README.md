@@ -6,7 +6,7 @@ A repository to allows finding inner parts of VectorDrawable, and perform operat
 
 <img src="https://raw.githubusercontent.com/AndroidDeveloperLB/VectorChildFinder/main/extras/sample_video.gif" width="250" >
 
-The need of this was because these are missing features, can't be added, and you can't use reflection to reach the various fields&methods of it, either (because of Android security).
+The need of this was because these are missing features, you can't extend/customize anything in the framework/support-library to add them, and you can't use reflection to reach the various fields&methods of it, either (because of Android security).
 
 ## Advantages over VectorDrawable&VectorDrawableCompat :
 
