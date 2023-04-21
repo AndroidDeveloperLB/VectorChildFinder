@@ -54,6 +54,7 @@ class MainActivity : AppCompatActivity() {
         binding.blueColorButton.setOnClickListener {
             colorize(android.R.color.holo_blue_dark)
         }
+
     }
 
     private fun colorize(@ColorRes colorResId: Int) {
